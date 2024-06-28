@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Currículo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Currículo</h1>
+        <form id="cv-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="dob">Data de Nascimento:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="photo">Foto:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <label for="education">Educação:</label>
+            <textarea id="education" name="education" required></textarea>
+
+            <label for="experience">Experiência:</label>
+            <textarea id="experience" name="experience" required></textarea>
+
+            <label for="skills">Habilidades:</label>
+            <textarea id="skills" name="skills" required></textarea>
+
+            <button type="button" onclick="generateCV()">Gerar Currículo</button>
+        </form>
+        <div id="cv-output">
+            <!-- Currículo gerado será exibido aqui -->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
